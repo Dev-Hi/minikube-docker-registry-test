@@ -149,12 +149,14 @@ spec:
       nodePort: 31212
 ```
 <br/>
+
 위의 파일에서 `yourClusterIP/example`이 존재하는 것을 확인할 수 있는데, 여기서 docker registry cluster에대한 ip를 입력합니다. 아래의 명령어를 입력하여, docker registry cluster ip를 확인합니다.
 
 ```shell
 kubectl get services --namespace kube-system
 ```
 <br/>
+
 `NAME`이 registry를 갖는 행에서 `CLUSTIER-IP`정보가 있을 것입니다. 이 정보를 입력합니다. 마지막으로 아래의 명령어를 입력하여 `deployment`, `service`를 minikube에 반영합니다. 
 
 ```shell
