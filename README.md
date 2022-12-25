@@ -61,7 +61,7 @@ docker registry가 minikube에 정상적으로 구축됐다면, 다음의 명령
 ```shell
 curl http://localhost:57452/v2/_catalog  
 ```
-
+<br/>
 출력의 결과는 아래처럼 나올 것입니다.
 
 ```json
@@ -148,21 +148,19 @@ spec:
       targetPort: 8080
       nodePort: 31212
 ```
-
- 
-
+<br/>
 위의 파일에서 `yourClusterIP/example`이 존재하는 것을 확인할 수 있는데, 여기서 docker registry cluster에대한 ip를 입력합니다. 아래의 명령어를 입력하여, docker registry cluster ip를 확인합니다.
 
 ```shell
 kubectl get services --namespace kube-system
 ```
-
+<br/>
 `NAME`이 registry를 갖는 행에서 `CLUSTIER-IP`정보가 있을 것입니다. 이 정보를 입력합니다. 마지막으로 아래의 명령어를 입력하여 `deployment`, `service`를 minikube에 반영합니다. 
 
 ```shell
 kubectl apply -f example-app-deployment.yaml
 ```
-
+<br/>
 위의 명령어 입력하실 때, 파일이 있는 경로에 실행해주면 됩니다. 참고로 k9s를 통해 확인하면, 배포가 정상적으로 됐는지 쉽게 확인할 수 있습니다. 
 
 <br/>
@@ -179,9 +177,9 @@ minikube service myapp-svc
 
 마지막 3줄에 아래와 같은 내용이 나오는 것을 볼 수 있는데, <br/>
 
-🎉  Opening service default/myapp-svc in default browser...
-👉  `http://127.0.0.1:39185`
-❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
+🎉  Opening service default/myapp-svc in default browser... <br/>
+👉  `http://127.0.0.1:39185` <br/>
+❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it. <br/>
 
 <br/>
 
