@@ -26,7 +26,7 @@ test {
 
 jib {
     to {
-        image = "localhost:5000/example"
+        image = "localhost:57452/example"
     }
 
     // local docker registry를 사용하기 때문에, http 허용
